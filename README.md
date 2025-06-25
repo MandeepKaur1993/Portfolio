@@ -44,12 +44,14 @@ I have developed:
 
 4. ETL and Cataloging
 To get the data ready quickly to be analyzed, I employed AWS Glue Crawler to generate metadata tables of the data framework and automatically read through the dataset to find the schema. The following queries were made by querying the data through Amazon Athena using such tables.
+![image](https://github.com/user-attachments/assets/478e712a-7b7f-4bf5-98c3-1772feb3d053)
+
 Also, I created a whole pipeline of ETL based on AWS Glue that could process the whole pipeline of having data and treating it, turning it into the form needed by the analysis, and storing the results in a structured form.
-5. MONITORING, GOVERNANCE, and data security
+6. MONITORING, GOVERNANCE, and data security
 To achieve high-level data security, I enabled AWS KMS (Key Management Service) with customer-managed keys to encrypt the contents of the S3 bucket. I have also enabled bucket versioning and set replication across buckets to help create proper backups and avoid any loss of my data.
 Data governance includes applying quality rules with the help of AWS Glue, which divides records into passed and failed ones and saves them in separate folders. This helped in providing more control and review of data.
 I also configured CloudTrail to log API activity to be used as a part of the audit and implemented CloudWatch dashboards to be able to monitor important metrics, which were bucket size and Glue job performance. Operational issues were monitored, and alerts were set to respond to them on a real-time basis.
-6. Analysis and Cost Control
+7. Analysis and Cost Control
 I have assessed my cloud infrastructure design based on the AWS Well-Architected Framework regarding the chief pillars of the framework, which include Operational Excellence, Security, Reliability, Performance Efficiency, and Cost Optimization.
 I calculated the annual price of operating the solution with the help of the AWS Pricing Calculator. The mentioned results proved that the pipeline was not simply effective and scalable but also cost-efficient to be used on a long-term basis.
 Tools and Technologies:
